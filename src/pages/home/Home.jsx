@@ -689,12 +689,12 @@ const Home = () => {
               Join 245+ Amazon sellers who automated their stores and increased profits by 157% on average.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn btn-neutral btn-lg gap-3 shadow-lg">
-                Start Free Trial <FaArrowRight />
+              <button className="btn btn-neutral btn-lg gap-3 shadow-lg" onClick={() => window.open('/contact')}>
+                Contact Us Today <FaArrowRight />
               </button>
-              <button className="btn btn-outline btn-neutral btn-lg">
+              <button className="btn btn-outline btn-neutral btn-lg" onClick={() => window.open('https://calendly.com/eliteant/30min', '_blank')}>
                 <FaGraduationCap />
-                Free Strategy Session
+                Take a Strategy Session
               </button>
             </div>
             <p className="text-white/70 mt-6">30-day money-back guarantee • No long-term contracts • 24/7 support</p>
