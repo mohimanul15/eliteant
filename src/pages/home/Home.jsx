@@ -263,7 +263,7 @@ const Home = () => {
                 variants={itemVariants}
               >
                 <span className={`${darkMode ? 'bg-gradient-to-r from-orange-400 via-orange-500 to-yellow-400' : 'bg-gradient-to-r from-orange-600 to-yellow-600'} bg-clip-text text-transparent`}>
-                  AI-Powered Amazon
+                  Your Complete Amazon
                 </span>
                 <span className="block">Store Automation</span>
               </motion.h1>
