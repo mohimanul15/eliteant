@@ -8,7 +8,6 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "postbuild": "echo https://eliteant-v2.surge.sh > dist/CNAME && surge dist",
     "github" : "node github-push.js",
     "ship" : "npm run build && npm run github"
   },
