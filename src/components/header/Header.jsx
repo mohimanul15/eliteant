@@ -427,7 +427,7 @@ const Header = () => {
                   </div>
 
                   {/* Mobile Dropdown Items */}
-                  <div className="mt-4 pt-4 border-t border-gray-200/30 dark:border-gray-700/30">
+                  {/* <div className="mt-4 pt-4 border-t border-gray-200/30 dark:border-gray-700/30">
                     <h4 className="px-4 text-sm font-semibold mb-2">More Features</h4>
                     <div className="space-y-1">
                       {dropdownItems.map((item, index) => (
@@ -440,10 +440,10 @@ const Header = () => {
                         </button>
                       ))}
                     </div>
-                  </div>
+                  </div> */}
 
                   {/* Mobile CTA */}
-                  <div className="mt-6 flex gap-3">
+                  {/* <div className="mt-6 flex gap-3">
                     <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-gradient-to-r from-orange-500 to-amber-500 text-white">
                       <FaSignInAlt />
                       <span>Sign In</span>
@@ -452,7 +452,7 @@ const Header = () => {
                       <FaUserPlus />
                       <span>Sign Up</span>
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </motion.div>
