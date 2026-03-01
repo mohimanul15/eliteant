@@ -379,10 +379,12 @@ const Header = () => {
               </div>
 
               {/* CTA Button */}
-              <button className={`hidden md:flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-lg hover:shadow-xl transition-shadow ml-2`}>
-                <FaRocket />
-                <span className="font-medium">Get Started</span>
-              </button>
+              <a href='https://calendly.com/eliteant/30min' target='_blank'>
+                <button className={`hidden md:flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-lg hover:shadow-xl transition-shadow ml-2`}>
+                  <FaRocket />
+                  <span className="font-medium">Get Started</span>
+                </button>
+              </a>
             </div>
           </div>
         </div>

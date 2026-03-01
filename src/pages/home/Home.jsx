@@ -289,6 +289,7 @@ const Home = () => {
                       boxShadow: "0 20px 40px -10px rgba(245, 158, 11, 0.4)"
                     }}
                     whileTap={{ scale: 0.95 }}
+                    onClick={() => window.open('https://wa.me/8801768937103', '_blank')}
                   >
                     <span>Get Started</span>
                     <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
