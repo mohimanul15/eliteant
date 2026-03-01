@@ -128,10 +128,10 @@ const Header = () => {
         {/* Background with blur effect */}
         <div className={`absolute inset-0 backdrop-blur-md ${darkMode ? 'bg-gray-900/70' : 'bg-white/70'} border-b ${darkMode ? 'border-gray-700/30' : 'border-gray-200/30'}`}>
           {/* Animated gradient background */}
-          <div className="absolute inset-0 opacity-10">
+          {/* <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-orange-500 to-amber-500"></div>
             <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-r from-blue-500 to-cyan-500"></div>
-          </div>
+          </div> */}
         </div>
 
         <div className="container mx-auto px-4 relative">

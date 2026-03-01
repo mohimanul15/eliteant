@@ -51,7 +51,7 @@ import YoutubeSingle from '../../components/youtubesingle/YoutubeSingle';
 import { FaMoneyBillTrendUp, FaUsersGear } from 'react-icons/fa6';
 import { AppContext } from '../../appcontext/AppContext';
 
-const Home = () => {
+const HomeCopy = () => {
   const { darkMode, setDarkMode } = useContext(AppContext);
   const [activeTab, setActiveTab] = useState('overview');
   const [email, setEmail] = useState('');
@@ -88,11 +88,25 @@ const Home = () => {
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      title: 'Product Research & Warehouse manage',
-      description: 'Genuine product research and total warehouse management',
+      title: 'Product Research AI',
+      description: 'AI-powered product discovery and validation',
       icon: <FaBrain />,
-      features: ['Market analysis', 'Competitor research', 'Warehouse management', 'Trend forecasting'],
+      features: ['Market analysis', 'Competitor research', 'Profitability scoring', 'Trend forecasting'],
       color: 'from-purple-500 to-pink-500'
+    },
+    {
+      title: 'Automated PPC Management',
+      description: 'AI-driven advertising campaigns',
+      icon: <FaChartLine />,
+      features: ['Campaign optimization', 'Bid management', 'Keyword research', 'ROI tracking'],
+      color: 'from-orange-500 to-red-500'
+    },
+    {
+      title: 'Inventory Automation',
+      description: 'Smart inventory management system',
+      icon: <FaBox />,
+      features: ['Stock alerts', 'Reorder automation', 'FBA management', 'Cost optimization'],
+      color: 'from-green-500 to-emerald-500'
     },
     {
       title: 'Review & Feedback Management',
@@ -100,6 +114,13 @@ const Home = () => {
       icon: <FaStar />,
       features: ['Review solicitation', 'Feedback automation', 'Issue resolution', 'Brand monitoring'],
       color: 'from-yellow-500 to-amber-500'
+    },
+    {
+      title: 'Analytics Dashboard',
+      description: 'Real-time performance insights',
+      icon: <FaDatabase />,
+      features: ['Sales analytics', 'Profit tracking', 'Market insights', 'Custom reports'],
+      color: 'from-indigo-500 to-purple-500'
     },
   ];
 
@@ -141,20 +162,38 @@ const Home = () => {
   // Features grid
   const features = [
     {
-      title: 'Complete Seller Central Manage',
-      description: 'A-Z Management and optimized seller central health.',
+      title: 'AI Product Research',
+      description: 'Machine learning algorithms find winning products',
+      icon: <FaSearch className="text-3xl" />,
+      stats: '90% success rate'
+    },
+    {
+      title: 'Auto-Pricing Engine',
+      description: 'Dynamic pricing based on market conditions',
+      icon: <FaTag className="text-3xl" />,
+      stats: '27% avg. profit increase'
+    },
+    {
+      title: 'Review Automation',
+      description: 'Systematic review generation and management',
       icon: <FaStar className="text-3xl" />,
       stats: '4.8★ avg. rating'
     },
     {
-      title: 'Inventory Management',
-      description: 'We manage product from sourcing to handling',
+      title: 'Inventory AI',
+      description: 'Predictive inventory management',
       icon: <FaBox className="text-3xl" />,
       stats: '99% stock availability'
     },
     {
-      title: 'Relax and earn profit',
-      description: 'Spend holidays While we manage your business',
+      title: 'PPC Optimizer',
+      description: 'AI-driven advertising optimization',
+      icon: <FaChartLine className="text-3xl" />,
+      stats: '45% lower ACOS'
+    },
+    {
+      title: 'Competitor Intelligence',
+      description: 'Real-time competitor monitoring',
       icon: <FaEye className="text-3xl" />,
       stats: '24/7 tracking'
     },
@@ -239,37 +278,35 @@ const Home = () => {
         </div>
 
         <div className="container mx-auto px-4 relative">
-          <div className="flex lg:flex-row items-center justify-center gap-8 md:gap-12">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12">
             {/* Left Content */}
             <motion.div
-              className="items-center space-y-4 mb-8"
+              className="lg:w-1/2"
               variants={containerVariants}
               initial="hidden"
               animate="visible"
             >
-              <div className='flex justify-center'>
-                <motion.div
-                  className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-500/10 to-yellow-500/10 rounded-full px-4 py-2 mb-6 border border-orange-500/20"
-                  variants={itemVariants}
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <FaAmazon className="text-orange-500" />
-                  <span className="font-semibold text-orange-500">Amazon Automation Experts</span>
-                </motion.div>
-              </div>
+              <motion.div
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-500/10 to-yellow-500/10 rounded-full px-4 py-2 mb-6 border border-orange-500/20"
+                variants={itemVariants}
+                whileHover={{ scale: 1.05 }}
+              >
+                <FaAmazon className="text-orange-500" />
+                <span className="font-semibold text-orange-500">Amazon Automation Experts</span>
+              </motion.div>
 
               <motion.h1
-                className="text-center text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
+                className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
                 variants={itemVariants}
               >
-                <span className={`${darkMode ? 'bg-gradient-to-r from-orange-400 via-orange-500 to-yellow-400' : 'bg-gradient-to-r from-orange-600 to-yellow-600'} bg-clip-text text-transparent`}>
+                <span className={`${darkMode ? 'bg-gradient-to-r from-orange-400 to-yellow-400' : 'bg-gradient-to-r from-orange-600 to-yellow-600'} bg-clip-text text-transparent`}>
                   AI-Powered Amazon
                 </span>
                 <span className="block">Store Automation</span>
               </motion.h1>
 
               <motion.p
-                className={`text-xl ${darkMode ? 'text-gray-300' : 'text-gray-600'} mb-8 leading-relaxed text-center max-w-4xl mx-auto`}
+                className={`text-xl ${darkMode ? 'text-gray-300' : 'text-gray-600'} mb-8 leading-relaxed`}
                 variants={itemVariants}
               >
                 Let our Automate system manage your entire Amazon business. From product research to
@@ -277,74 +314,183 @@ const Home = () => {
                 Focus on growth while we handle the operations.
               </motion.p>
 
-              <div className='flex justify-center'>
-                <motion.div
-                  className="flex flex-col sm:flex-row gap-4 mb-10"
-                  variants={itemVariants}
+              <motion.div
+                className="flex flex-col sm:flex-row gap-4 mb-10"
+                variants={itemVariants}
+              >
+                <motion.button
+                  className="btn bg-gradient-to-r from-orange-500 to-yellow-500 text-white border-0 btn-lg gap-3 shadow-lg"
+                  whileHover={{
+                    scale: 1.05,
+                    boxShadow: "0 20px 40px -10px rgba(245, 158, 11, 0.4)"
+                  }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  <motion.button
-                    className="btn bg-gradient-to-r from-orange-500 to-yellow-500 text-white border-0 btn-lg gap-3 shadow-lg"
-                    whileHover={{
-                      scale: 1.05,
-                      boxShadow: "0 20px 40px -10px rgba(245, 158, 11, 0.4)"
-                    }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <span>Get Started</span>
-                    <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
-                  </motion.button>
-                  <button
-                    className={`btn ${darkMode ? 'btn-outline btn-warning' : 'btn-outline'} btn-lg gap-2`}
-                    onClick={() => window.open('https://calendly.com/eliteant/30min', '_blank')}
-                  >
-                    <FaVideo />
-                    Take a Starategy Session
-                  </button>
-                </motion.div>
-              </div>
+                  <span>Get Started</span>
+                  <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                </motion.button>
+                <button
+                  className={`btn ${darkMode ? 'btn-outline btn-warning' : 'btn-outline'} btn-lg gap-2`}
+                  onClick={() => window.open('https://calendly.com/eliteant/30min', '_blank')}
+                >
+                  <FaVideo />
+                  Take a Starategy Session
+                </button>
+              </motion.div>
 
               {/* Trust Indicators */}
-              <div className='flex justify-center'>
-                <motion.div
-                  className="flex flex-wrap items-center gap-8"
-                  variants={itemVariants}
-                >
-                  <div className="flex items-center gap-3">
-                    <div className={`p-3 rounded-xl ${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-md`}>
-                      <FaUsersGear className="text-2xl text-yellow-500" />
-                    </div>
-                    <div>
-                      <div className="font-bold text-xl">149 Clients</div>
-                      <div className="text-sm opacity-70">Trusted by Our Service</div>
-                    </div>
+              <motion.div
+                className="flex flex-wrap items-center gap-8"
+                variants={itemVariants}
+              >
+                <div className="flex items-center gap-3">
+                  <div className={`p-3 rounded-xl ${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-md`}>
+                    <FaUsersGear className="text-2xl text-yellow-500" />
                   </div>
-
-                  <div className="flex items-center gap-3">
-                    <div className={`p-3 rounded-xl ${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-md`}>
-                      <FaAward className="text-2xl text-orange-500/70" />
-                    </div>
-                    <div>
-                      <div className="font-bold text-xl">4.9/5 Rating</div>
-                      <div className="text-sm opacity-70">245+ Reviews</div>
-                    </div>
+                  <div>
+                    <div className="font-bold text-xl">149 Clients</div>
+                    <div className="text-sm opacity-70">Trusted by Our Service</div>
                   </div>
+                </div>
 
-                  <div className="flex items-center gap-3">
-                    <div className={`p-3 rounded-xl ${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-md`}>
-                      <FaMoneyBillTrendUp className="text-2xl text-orange-500" />
-                    </div>
-                    <div>
-                      <div className="font-bold text-xl">8.7M Profit</div>
-                      <div className="text-sm opacity-70">500+ Stores</div>
-                    </div>
+                <div className="flex items-center gap-3">
+                  <div className={`p-3 rounded-xl ${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-md`}>
+                    <FaAward className="text-2xl text-orange-500/70" />
                   </div>
+                  <div>
+                    <div className="font-bold text-xl">4.9/5 Rating</div>
+                    <div className="text-sm opacity-70">245+ Reviews</div>
+                  </div>
+                </div>
 
-                </motion.div>
-              </div>
+                <div className="flex items-center gap-3">
+                  <div className={`p-3 rounded-xl ${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-md`}>
+                    <FaMoneyBillTrendUp className="text-2xl text-orange-500" />
+                  </div>
+                  <div>
+                    <div className="font-bold text-xl">8.7M Profit</div>
+                    <div className="text-sm opacity-70">500+ Stores</div>
+                  </div>
+                </div>
+
+              </motion.div>
             </motion.div>
 
             {/* Right Content - Dashboard */}
+            <motion.div
+              className="lg:w-1/2 relative"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              {/* Floating Amazon Cube */}
+              <motion.div
+                className="absolute -top-6 -right-6 w-32 h-32 z-10"
+                animate={{
+                  rotate: [0, 360],
+                  transition: {
+                    duration: 20,
+                    repeat: Infinity,
+                    ease: "linear"
+                  }
+                }}
+              >
+                <div className="w-full h-full bg-gradient-to-br from-orange-500/20 to-yellow-500/20 rounded-2xl border border-orange-500/30 backdrop-blur-sm flex items-center justify-center">
+                  <FaAmazon className="text-4xl text-orange-500" />
+                </div>
+              </motion.div>
 
+              {/* Main Dashboard Card */}
+              <motion.div
+                className={`card ${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-2xl border ${darkMode ? 'border-gray-700' : 'border-gray-200'} overflow-hidden`}
+                initial={{ y: 50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                whileHover={{ y: -5 }}
+              >
+                <div className="card-body p-6">
+                  {/* Dashboard Header */}
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="flex items-center gap-3">
+                      <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                      <div>
+                        <h3 className="font-bold text-xl">Automation Dashboard</h3>
+                        <p className="text-sm opacity-70">Store: AmazonStore</p>
+                      </div>
+                    </div>
+                    <div className="badge badge-success badge-lg gap-2">
+                      <FaRobot />
+                      AI Active
+                    </div>
+                  </div>
+
+                  {/* Live Stats */}
+                  <div className="grid grid-cols-3 gap-4 mb-6">
+                    <div className={`${darkMode ? 'bg-gray-700/50' : 'bg-gray-100'} rounded-xl p-4 text-center`}>
+                      <div className="text-2xl font-bold text-green-500">$4,827</div>
+                      <div className="text-sm opacity-70">Today's Sales</div>
+                    </div>
+                    <div className={`${darkMode ? 'bg-gray-700/50' : 'bg-gray-100'} rounded-xl p-4 text-center`}>
+                      <div className="text-2xl font-bold text-blue-500">42</div>
+                      <div className="text-sm opacity-70">New Orders</div>
+                    </div>
+                    <div className={`${darkMode ? 'bg-gray-700/50' : 'bg-gray-100'} rounded-xl p-4 text-center`}>
+                      <div className="text-2xl font-bold text-purple-500">4.8★</div>
+                      <div className="text-sm opacity-70">Avg Rating</div>
+                    </div>
+                  </div>
+
+                  {/* AI Actions */}
+                  <div className={`${darkMode ? 'bg-gray-700/30' : 'bg-orange-50'} rounded-xl p-4 mb-6`}>
+                    <div className="flex items-center gap-3 mb-3">
+                      <FaBrain className="text-orange-500 text-xl" />
+                      <div>
+                        <div className="font-bold">AI Optimization Active</div>
+                        <div className="text-sm opacity-70">6 tasks completed today</div>
+                      </div>
+                    </div>
+                    <div className="space-y-2">
+                      {['Price optimized (+$2.14 avg)', 'PPC bids adjusted (-15% ACOS)', 'Inventory reordered (42 units)', 'Reviews solicited (8 new)'].map((task, idx) => (
+                        <div key={idx} className="flex items-center gap-2 text-sm">
+                          <FaCheckCircle className="text-green-500" />
+                          <span>{task}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Performance Chart */}
+                  <div>
+                    <div className="flex justify-between items-center mb-3">
+                      <div className="font-bold">Monthly Revenue Trend</div>
+                      <div className="text-sm opacity-70">+47% vs last month</div>
+                    </div>
+                    <div className="h-20 flex items-end gap-1">
+                      {[40, 55, 65, 75, 85, 95, 85, 75, 85, 95, 100, 95].map((height, index) => (
+                        <motion.div
+                          key={index}
+                          className="flex-1 bg-gradient-to-t from-orange-500 to-yellow-500 rounded-t"
+                          initial={{ height: 0 }}
+                          animate={{ height: `${height}%` }}
+                          transition={{ duration: 1, delay: 1 + index * 0.05, ease: "easeOut" }}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Floating Stats */}
+              <motion.div
+                className="absolute -bottom-4 -left-4 w-28 h-28 bg-gradient-to-tr from-orange-500/10 to-transparent border border-orange-500/20 rounded-2xl flex items-center justify-center backdrop-blur-sm"
+                animate={floatAnimation}
+              >
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-orange-500">157%</div>
+                  <div className="text-xs opacity-70">Avg ROI</div>
+                </div>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -737,4 +883,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomeCopy;

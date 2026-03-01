@@ -5,6 +5,8 @@ import NotFound from "../pages/notfound/NotFound";
 import About from "../pages/about/About";
 import Services from "../pages/services/Services";
 import Contact from "../pages/contact/Contact";
+import Home2 from "../pages/home/Home2";
+import Homed from "../pages/home/Homed";
 
 const RouterList = createBrowserRouter([
     {

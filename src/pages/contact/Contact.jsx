@@ -17,7 +17,8 @@ import {
   FaStar,
   FaUser,
   FaBuilding,
-  FaGlobe
+  FaGlobe,
+  FaYoutube
 } from 'react-icons/fa';
 import { AppContext } from '../../appcontext/AppContext';
 
@@ -60,7 +61,7 @@ const Contact = () => {
       expertise: ["Amazon FBA", "Business Strategy", "Independent Automation"]
     },
     {
-      name: "Hridoy Hasan",
+      name: "Ahmed Hasan",
       role: "CTO",
       bio: "Sourcing specialist with 10+ years in e-commerce automation. Built 40+ successful Seller Central.",
       imageColor: "from-purple-500 to-pink-500",
@@ -150,26 +151,26 @@ const Contact = () => {
     {
       icon: <FaEnvelope className="text-2xl" />,
       title: "Email Address",
-      details: ["support@amazonautomation.com", "sales@amazonautomation.com"],
+      details: ["support@eliteant.com", "sales@eliteant.com"],
       description: "Typically respond within 4 hours",
       color: "from-orange-500 to-amber-500",
-      action: "mailto:support@amazonautomation.com"
+      action: "mailto:contact@eliteant.com"
     },
     {
       icon: <FaPhone className="text-2xl" />,
       title: "Phone Number",
-      details: ["+1 (800) 123-4567", "+1 (800) 987-6543"],
-      description: "Mon-Fri 9:00 AM - 6:00 PM EST",
+      details: ["+880 1768-937103", "+880 1768-937103"],
+      description: "24*7 available on WA",
       color: "from-blue-500 to-cyan-500",
-      action: "tel:+18001234567"
+      action: "tel:+880 1768-937103"
     },
     {
       icon: <FaMapMarkerAlt className="text-2xl" />,
       title: "Office Location",
-      details: ["123 Automation Avenue", "Suite 500, Seattle, WA 98101"],
-      description: "Visit by appointment only",
+      details: ["4th Floor, West Side of City Bhaban", "MRF Tyers Building, Rajshahi 6100"],
+      description: "Get a meeting schedule now",
       color: "from-purple-500 to-pink-500",
-      action: "https://maps.google.com"
+      action: "https://maps.app.goo.gl/r7L87etfHHqvrVp46"
     },
     {
       icon: <FaHeadset className="text-2xl" />,
@@ -548,14 +549,15 @@ const Contact = () => {
                   <h3 className="text-2xl font-bold mb-6">Follow Us</h3>
                   <div className="flex gap-4">
                     {[
-                      { icon: FaLinkedin, color: 'from-blue-600 to-blue-700', label: 'LinkedIn' },
-                      { icon: FaTwitter, color: 'from-sky-500 to-blue-500', label: 'Twitter' },
-                      { icon: FaFacebook, color: 'from-blue-600 to-blue-800', label: 'Facebook' },
-                      { icon: FaInstagram, color: 'from-pink-500 to-purple-500', label: 'Instagram' },
+                      { icon: FaLinkedin, color: 'from-blue-600 to-blue-700', label: 'LinkedIn', link: "https://www.linkedin.com/company/eliteant" },
+                      { icon: FaYoutube, color: 'from-sky-500 to-blue-500', label: 'Youtube', link: "https://www.youtube.com/@Eliteant-com" },
+                      { icon: FaFacebook, color: 'from-blue-600 to-blue-800', label: 'Facebook', link: "https://www.facebook.com/eliteantbd" },
+                      { icon: FaInstagram, color: 'from-pink-500 to-purple-500', label: 'Instagram', link: "https://www.instagram.com/eliteantbd" },
                     ].map((social, index) => (
                       <motion.a
                         key={index}
-                        href="#"
+                        href={social.link}
+                        target='_blank'
                         whileHover={{ y: -5 }}
                         className="flex-1"
                       >
